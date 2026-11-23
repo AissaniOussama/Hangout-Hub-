@@ -5,6 +5,9 @@
 **Modul:** Komponentenbasierte Entwicklung, SoSe 26
 **Team:** Luca John Herzke, Oussama Badr-Eddine Aissani
 
+**🌐 Live:** https://br-twilight-base-bdscf6vp-hangouthub.compute.c-8.us-east-2.aws.neon.tech
+(läuft komplett auf Neon – Backend, Frontend und Datenbank; Details in [`neon-backend/README.md`](neon-backend/README.md))
+
 ---
 
 ## The Problem

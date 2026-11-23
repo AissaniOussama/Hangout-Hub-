@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* ── HangoutHub brand theme ─────────────────────────────────────────────────
+   Palette taken from the logo: four friends (red / yellow / green / blue)
+   around a table (brown). Blue doubles as the primary action color. */
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-brand-red: #c9252c;
+  --color-brand-yellow: #ffcf1f;
+  --color-brand-green: #1e8e3e;
+  --color-brand-blue: #1e7fdb;
+  --color-brand-brown: #8b5e2f;
+
+  /* primary-* utilities (used across views) mapped to brand blue */
+  --color-primary-50: #eff8ff;
+  --color-primary-100: #daeeff;
+  --color-primary-200: #bde2ff;
+  --color-primary-300: #90cfff;
+  --color-primary-400: #5bb4fc;
+  --color-primary-500: #3495f8;
+  --color-primary-600: #1e7fdb;
+  --color-primary-700: #1765b3;
+  --color-primary-800: #185590;
+  --color-primary-900: #194874;
+  --color-primary-950: #122d49;
+}
+
+/* ── Base ── */
+body {
+  font-family: var(--font-sans);
+  background-color: #fafaf7;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+/* ── PrimeVue token tweaks: softer, rounder, friendlier ── */
+:root {
+  --p-card-border-radius: 1rem;
+  --p-button-border-radius: 0.75rem;
+  --p-dialog-border-radius: 1rem;
+  --p-card-shadow: 0 1px 3px rgb(0 0 0 / 0.05), 0 6px 20px -6px rgb(0 0 0 / 0.07);
+}
+
+/* ── Header nav pills ── */
+.nav-pill {
+  @apply px-3.5 py-1.5 rounded-full text-sm font-semibold text-slate-600 transition-colors;
+}
+.nav-pill:hover {
+  @apply bg-slate-100 text-slate-900;
+}
+.nav-pill.router-link-exact-active {
+  @apply bg-primary-50 text-primary-700;
+}
+
+/* ── Event cards: brand accent on top, gentle lift on hover ── */
+.event-card {
+  border-top: 4px solid var(--accent, var(--color-brand-blue));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -10px rgb(0 0 0 / 0.16);
+}
